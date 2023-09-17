@@ -24,7 +24,6 @@ public class Main {
         exitButton.setPreferredSize(new Dimension(200, 60));
         exitButton.setFocusPainted(false);
 
-        // Action listeners for buttons
         newGameButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
