@@ -28,14 +28,11 @@ public class Main {
         newGameButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JFrame gameFrame = new JFrame();
                 GamePanel gamePanel = new GamePanel();
-                gameFrame.setBounds(10, 10, 700, 600);
-                gameFrame.setTitle("Brick Breaker");
-                gameFrame.setResizable(false);
-                gameFrame.setVisible(true);
-                gameFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                gameFrame.add(gamePanel);
+                menuFrame.getContentPane().removeAll();
+                menuFrame.add(gamePanel);
+                menuFrame.validate();
+                menuFrame.repaint();
             }
         });
 
@@ -46,16 +43,15 @@ public class Main {
             }
         });
 
-        // Title label settings
+
         titleLabel.setFont(new Font("Arial", Font.BOLD, 70));
         titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
         titleLabel.setForeground(Color.WHITE);
 
-        // Panel layout and background color
         panel.setLayout(new BorderLayout());
         panel.setBackground(Color.BLACK);
 
-        // Button panel
+
         JPanel buttonPanel = new JPanel();
         buttonPanel.setLayout(new BoxLayout(buttonPanel, BoxLayout.Y_AXIS));
         buttonPanel.setBackground(Color.BLACK);
@@ -63,7 +59,7 @@ public class Main {
         buttonPanel.add(Box.createRigidArea(new Dimension(0, 20)));
         buttonPanel.add(exitButton);
 
-        // Center panel for aligning the buttons
+
         JPanel centerPanel = new JPanel();
         centerPanel.setLayout(new GridBagLayout());
         centerPanel.setBackground(Color.BLACK);
