@@ -2,17 +2,17 @@ import java.awt.*;
 import java.util.Random;
 
 public class BrickGenerator {
-    public int[][] bricks;
+    public Brick[][] bricks;
     public int brickWidth;
     public int brickHeight;
     private Random random = new Random();
-    private Color brickColor = new Color(random.nextInt(255), random.nextInt(255), random.nextInt(255));
 
     public BrickGenerator(int row, int col) {
-        bricks = new int[row][col];
+        bricks = new Brick[row][col];
         for (int i = 0; i < bricks.length; i++) {
             for (int j = 0; j < bricks[0].length; j++) {
-                bricks[i][j] = 1;
+                Color brickColor = new Color(random.nextInt(255), random.nextInt(255), random.nextInt(255));
+                bricks[i][j] = new Brick(1, brickColor);
             }
         }
 
@@ -23,8 +23,8 @@ public class BrickGenerator {
     public void draw(Graphics2D g) {
         for (int i = 0; i < bricks.length; i++) {
             for (int j = 0; j < bricks[0].length; j++) {
-                if (bricks[i][j] > 0) {
-                    g.setColor(brickColor);
+                if (bricks[i][j].value > 0) {
+                    g.setColor(bricks[i][j].color);
                     g.fillRect(j * brickWidth + 80, i * brickHeight + 50, brickWidth, brickHeight);
                 }
             }
@@ -32,6 +32,16 @@ public class BrickGenerator {
     }
 
     public void setBrickValue(int value, int row, int col) {
-        bricks[row][col] = value;
+        bricks[row][col].value = value;
+    }
+
+    public static class Brick {
+        int value;
+        Color color;
+
+        public Brick(int value, Color color) {
+            this.value = value;
+            this.color = color;
+        }
     }
 }
