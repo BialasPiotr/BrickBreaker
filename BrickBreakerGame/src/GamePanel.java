@@ -44,7 +44,7 @@ public class GamePanel extends JPanel implements KeyListener, ActionListener {
         }
         for (int i = 0; i < brickGenerator.bricks.length; i++) {
             for (int j = 0; j < brickGenerator.bricks[0].length; j++) {
-                if (brickGenerator.bricks[i][j] > 0) {
+                if (brickGenerator.bricks[i][j].value > 0) {
                     int brickX = j * brickGenerator.brickWidth + 80;
                     int brickY = i * brickGenerator.brickHeight + 50;
                     int brickWidth = brickGenerator.brickWidth;
