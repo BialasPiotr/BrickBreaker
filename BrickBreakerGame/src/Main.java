@@ -11,7 +11,7 @@ public class Main {
         JButton exitButton = new JButton("Exit");
         JLabel titleLabel = new JLabel("BRICK BREAKER");
 
-        // Styling buttons
+
         newGameButton.setFont(new Font("Arial", Font.PLAIN, 24));
         newGameButton.setBackground(Color.GREEN);
         newGameButton.setForeground(Color.WHITE);
