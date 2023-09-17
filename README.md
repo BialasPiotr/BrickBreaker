@@ -18,7 +18,7 @@ This repository contains a simple but engaging Brick Breaker game implemented in
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/BialasPiotr/BrickBreaker.git
+   git clone https://github.com/BialasPiotr/BrickBreaker
 2. Navigate to the source folder:
    cd BrickBreaker/src
 3. Compile the Java files:
