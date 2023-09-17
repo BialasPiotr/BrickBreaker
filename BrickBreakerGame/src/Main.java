@@ -33,6 +33,7 @@ public class Main {
                 menuFrame.add(gamePanel);
                 menuFrame.validate();
                 menuFrame.repaint();
+                gamePanel.requestFocusInWindow();
             }
         });
 
