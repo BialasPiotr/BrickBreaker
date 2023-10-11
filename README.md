@@ -24,7 +24,7 @@ This repository contains a simple but engaging Brick Breaker game implemented in
 
 - Java JDK (Version 8 or higher recommended)
 
-## How to Run
+## How to Run 
 
 1. Clone the repository:
    ```bash
